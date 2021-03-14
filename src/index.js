@@ -1,7 +1,7 @@
 module.exports = function reverse(n) {
-    let str = n + "";
-
-    return str.split("").reverse().join("") > 0
-        ? str.split("").reverse().join("")
-        : str.split("").reverse().join("").replace("-", "");
+    if (n < 0) {
+        return Number((-n).toString().split("").reverse().join(""));
+    } else {
+        return Number(n.toString().split("").reverse().join(""));
+    }
 };
